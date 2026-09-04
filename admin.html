@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ZAYRA | Administração</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/admin.css">
+
+
+</head>
+
+<body>
+
+
+    <!-- =================================================
+     CABEÇALHO
+================================================== -->
+
+    <header class="admin-header">
+
+        <div class="admin-logo">
+            ZAYRA
+        </div>
+
+        <div class="admin-acoes">
+
+            <a href="catalogo.html" class="voltar">
+                Ver catálogo
+            </a>
+
+            <button type="button" id="btn-sair" class="voltar">
+                Sair
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =================================================
+     PAINEL
+================================================== -->
+
+    <main class="admin-container">
+
+        <div class="admin-titulo">
+
+            <span>PAINEL ADMINISTRATIVO</span>
+
+            <h1>Gerenciar produtos</h1>
+
+            <p>
+                Adicione, edite ou remova as peças da sua coleção.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+         FORMULÁRIO
+    ================================================== -->
+
+        <section class="formulario">
+
+            <h2>Adicionar produto</h2>
+
+            <form id="form-produto">
+
+                <div class="campo">
+
+                    <label for="nome">
+                        Nome da peça
+                    </label>
+
+                    <input type="text" id="nome" placeholder="Ex: Vestido Aurora" required>
+
+                </div>
+
+
+                <div class="linha">
+
+                    <div class="campo">
+
+                        <label for="preco">
+                            Preço
+                        </label>
+
+                        <input type="text" id="preco" placeholder="Ex: R$ 149,90" required>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="categoria">
+                            Categoria
+                        </label>
+
+                        <select id="categoria" required>
+
+                            <option value="">
+                                Selecione
+                            </option>
+
+                            <option value="Vestidos">
+                                Vestidos
+                            </option>
+
+                            <option value="Tops">
+                                Tops
+                            </option>
+
+                            <option value="Calças">
+                                Calças
+                            </option>
+
+                            <option value="Conjuntos">
+                                Conjuntos
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="tamanho">
+                        Tamanhos disponíveis
+                    </label>
+
+                    <input type="text" id="tamanho" placeholder="Ex: P, M, G" required>
+
+                </div>
+
+
+                <div class="campo">
+                    <label for="imagem">Foto da peca</label>
+
+
+                    <div id="imagem-atual" class="imagem-atual"></div>
+
+                    <input type="file" id="imagem" accept="image/*">
+
+                    <small>
+                        Ao editar, deixe vazio para manter a foto atual.
+                    </small>
+
+
+                </div>
+
+
+
+                <button type="submit" class="btn-adicionar">
+                    Adicionar peça
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- =================================================
+         PRODUTOS CADASTRADOS
+    ================================================== -->
+
+        <section class="produtos-admin">
+
+            <div class="produtos-header">
+
+                <div>
+
+                    <span>
+                        CATÁLOGO
+                    </span>
+
+                    <h2>
+                        Peças cadastradas
+                    </h2>
+
+                </div>
+
+                <strong id="contador">
+                    0 peças
+                </strong>
+
+            </div>
+
+
+            <div id="lista-admin" class="lista-admin">
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =================================================
+     SUPABASE
+================================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- =================================================
+     JAVASCRIPT DO PAINEL
+================================================== -->
+
+    <script src="assets/js/admin.js"></script>
+
+
+</body>
+
+</html>

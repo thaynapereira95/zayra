@@ -1,0 +1,558 @@
+/* =====================================================
+   ZAYRA
+   PAINEL ADMINISTRATIVO
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f5f2;
+    color: #222;
+}
+
+
+@font-face {
+    font-family: "AhSing";
+    src: url("../fonts/AhSing.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.admin-header {
+    height: 85px;
+
+    padding: 0 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #f8f5f2;
+
+    border-bottom: 1px solid #e5dfda;
+}
+
+.admin-logo {
+    font-family: "AhSing", sans-serif;
+
+    font-size: 32px;
+
+    letter-spacing: 4px;
+}
+
+.voltar {
+    padding: 11px 20px;
+
+    border: 1px solid #222;
+
+    text-decoration: none;
+
+    color: #222;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    transition: .3s;
+}
+
+.voltar:hover {
+    background: #222;
+
+    color: white;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.admin-container {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 70px 25px;
+}
+
+
+/* =====================================================
+   TÍTULO
+===================================================== */
+
+.admin-titulo {
+    margin-bottom: 50px;
+}
+
+.admin-titulo span,
+.produtos-header span {
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #999;
+}
+
+.admin-titulo h1 {
+    font-family: Georgia, serif;
+
+    font-size: 48px;
+
+    font-weight: normal;
+
+    margin: 10px 0;
+}
+
+.admin-titulo p {
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   FORMULÁRIO
+===================================================== */
+
+.formulario {
+    background: white;
+
+    padding: 40px;
+
+    border: 1px solid #e8e2dd;
+
+    margin-bottom: 70px;
+}
+
+.formulario h2 {
+    font-family: Georgia, serif;
+
+    font-size: 28px;
+
+    font-weight: normal;
+
+    margin-bottom: 30px;
+}
+
+.campo {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 22px;
+}
+
+.linha {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+label {
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    color: #555;
+}
+
+input,
+select {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #d8d1cb;
+
+    background: #fff;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #9b8173;
+}
+
+small {
+    color: #999;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   BOTÃO
+===================================================== */
+
+.btn-adicionar {
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+
+    background: #222;
+
+    color: white;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.btn-adicionar:hover {
+    background: #9b8173;
+}
+
+
+/* =====================================================
+   PRODUTOS
+===================================================== */
+
+.produtos-header {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.produtos-header h2 {
+    font-family: Georgia, serif;
+
+    font-size: 36px;
+
+    font-weight: normal;
+
+    margin-top: 8px;
+}
+
+.produtos-header strong {
+    font-size: 13px;
+
+    font-weight: normal;
+
+    color: #777;
+}
+
+
+/* =====================================================
+   LISTA
+===================================================== */
+
+.lista-admin {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =====================================================
+   CARD ADMIN
+===================================================== */
+
+.produto-admin {
+    background: white;
+
+    border: 1px solid #e8e2dd;
+
+    overflow: hidden;
+}
+
+.produto-admin img {
+    width: 100%;
+
+    aspect-ratio: 3 / 4;
+
+    object-fit: cover;
+}
+
+.produto-admin-info {
+    padding: 18px;
+}
+
+.produto-admin-categoria {
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #999;
+
+    text-transform: uppercase;
+
+    margin-bottom: 8px;
+}
+
+.produto-admin-nome {
+    font-size: 15px;
+
+    margin-bottom: 7px;
+}
+
+.produto-admin-preco {
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 6px;
+}
+
+.produto-admin-tamanho {
+    font-size: 11px;
+
+    color: #777;
+
+    margin-bottom: 15px;
+}
+
+
+/* =====================================================
+   BOTÃO EXCLUIR
+===================================================== */
+
+.btn-excluir {
+    width: 100%;
+
+    padding: 11px;
+
+    border: 1px solid #c9b8ad;
+
+    background: white;
+
+    color: #8b6251;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.btn-excluir:hover {
+    background: #8b6251;
+
+    color: white;
+}
+
+
+/* =====================================================
+   SEM PRODUTOS
+===================================================== */
+
+.sem-produtos {
+    grid-column: 1 / -1;
+
+    padding: 70px 20px;
+
+    text-align: center;
+
+    background: white;
+
+    border: 1px solid #e8e2dd;
+
+    color: #999;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .lista-admin {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .admin-header {
+        padding: 0 20px;
+    }
+
+    .admin-logo {
+        font-size: 26px;
+    }
+
+    .admin-container {
+        padding: 45px 15px;
+    }
+
+    .admin-titulo h1 {
+        font-size: 38px;
+    }
+
+    .formulario {
+        padding: 25px;
+    }
+
+    .linha {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .lista-admin {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .produto-admin-info {
+        padding: 12px;
+    }
+
+    .produtos-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
+
+
+
+/* =====================================================
+   ACOES DO PRODUTO
+===================================================== */
+
+.acoes-produto {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+
+/* =====================================================
+   BOTAO EDITAR
+===================================================== */
+
+.btn-editar {
+    flex: 1;
+
+    padding: 12px 18px;
+
+    border: 1px solid #9b8173;
+
+    background: #9b8173;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.btn-editar:hover {
+    background: #80685c;
+
+    border-color: #80685c;
+
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   BOTAO EXCLUIR
+===================================================== */
+
+.acoes-produto .btn-excluir {
+    flex: 1;
+
+    margin-top: 0;
+
+    padding: 12px 18px;
+
+    border: 1px solid #d8d1cb;
+
+    background: transparent;
+
+    color: #777;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.acoes-produto .btn-excluir:hover {
+    background: #f5f1ee;
+
+    border-color: #9b8173;
+
+    color: #555;
+}
+
+
+/* =====================================================
+   RESPONSIVO
+===================================================== */
+
+@media (max-width: 500px) {
+
+    .acoes-produto {
+        flex-direction: column;
+    }
+
+    .btn-editar,
+    .acoes-produto .btn-excluir {
+        width: 100%;
+    }
+
+}
+

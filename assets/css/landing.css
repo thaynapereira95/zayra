@@ -1,0 +1,643 @@
+/* =====================================================
+   ZAYRA
+   LANDING PAGE
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background: #f8f5f2;
+
+    color: #222;
+
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =====================================================
+   FONTE DA MARCA
+===================================================== */
+
+@font-face {
+
+    font-family: "AhSing";
+
+    src: url("../fonts/AhSing.otf") format("opentype");
+
+    font-weight: normal;
+
+    font-style: normal;
+
+}
+
+
+/* =====================================================
+   PAGINA
+===================================================== */
+
+.pagina {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+/* =====================================================
+   DETALHES DECORATIVOS
+===================================================== */
+
+.pagina::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: #e9e1dc;
+
+    opacity: 0.35;
+
+    top: -250px;
+
+    right: -180px;
+
+    pointer-events: none;
+
+}
+
+
+.pagina::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+
+    height: 350px;
+
+    border-radius: 50%;
+
+    background: #e9e1dc;
+
+    opacity: 0.25;
+
+    bottom: -200px;
+
+    left: -150px;
+
+    pointer-events: none;
+
+}
+
+
+/* =====================================================
+   TOPO
+===================================================== */
+
+.topo {
+
+    width: 100%;
+
+    padding: 35px 6%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.logo {
+
+    font-family: "AhSing", sans-serif;
+
+    font-size: 40px;
+
+    letter-spacing: 5px;
+
+    font-weight: 500;
+
+}
+
+
+/* =====================================================
+   CONTEUDO
+===================================================== */
+
+.conteudo {
+
+    flex: 1;
+
+    width: 100%;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 85px 25px 90px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.pequeno-titulo {
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    color: #8d817a;
+
+    margin-bottom: 30px;
+
+}
+
+
+h1 {
+
+    font-family: "Bodoni Moda", serif;
+
+    font-size: clamp(55px, 8vw, 95px);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+
+    color: #222;
+
+}
+
+
+h1 em {
+
+    font-style: italic;
+
+    font-weight: 400;
+
+}
+
+
+.linha {
+
+    width: 45px;
+
+    height: 1px;
+
+    background: #9b8173;
+
+    margin: 40px 0;
+
+}
+
+
+.descricao {
+
+    max-width: 450px;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    color: #666;
+
+}
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 38px;
+
+    margin-bottom: 48px;
+
+}
+
+
+.status span {
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #9b8173;
+
+    animation: pulsar 2s infinite;
+
+}
+
+
+.status p {
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #555;
+
+}
+
+
+@keyframes pulsar {
+
+    0% {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        opacity: 0.35;
+
+        transform: scale(0.7);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+/* =====================================================
+   LINKS
+===================================================== */
+
+.links {
+
+    width: 100%;
+
+    max-width: 390px;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.link {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 19px 4px;
+
+    border-bottom: 1px solid #ded7d2;
+
+    font-size: 11px;
+
+    letter-spacing: 1.8px;
+
+    text-transform: uppercase;
+
+    color: #333;
+
+    transition:
+        color 0.3s ease,
+        padding-left 0.3s ease;
+
+}
+
+
+.link:first-child {
+
+    border-top: 1px solid #ded7d2;
+
+}
+
+
+.link:hover {
+
+    padding-left: 10px;
+
+    color: #9b8173;
+
+}
+
+
+.seta {
+
+    font-size: 16px;
+
+    transition: transform 0.3s ease;
+
+}
+
+
+.link:hover .seta {
+
+    transform: translateX(5px);
+
+}
+
+
+/* =====================================================
+   RODAPE
+===================================================== */
+
+footer {
+
+    width: 100%;
+
+    padding: 30px 6%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-top: 1px solid #ded7d2;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.footer-marca {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+}
+
+
+.footer-marca span {
+
+    font-family: "AhSing", sans-serif;
+
+    font-size: 17px;
+
+    letter-spacing: 3px;
+
+    color: #333;
+
+}
+
+
+.footer-marca p {
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: #999;
+
+}
+
+
+.footer-direitos {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+}
+
+
+.footer-direitos p {
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+
+    color: #999;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+
+    .topo {
+
+        padding: 28px 20px;
+
+    }
+
+
+    .logo {
+
+        font-size: 29px;
+
+        letter-spacing: 4px;
+
+    }
+
+
+    .conteudo {
+
+        padding: 70px 25px 65px;
+
+    }
+
+
+    .pequeno-titulo {
+
+        font-size: 8px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 25px;
+
+    }
+
+
+    h1 {
+
+        font-size: 55px;
+
+        letter-spacing: -2px;
+
+    }
+
+
+    .linha {
+
+        margin: 32px 0;
+
+    }
+
+
+    .descricao {
+
+        font-size: 13px;
+
+        line-height: 1.8;
+
+    }
+
+
+    .status {
+
+        margin-top: 32px;
+
+        margin-bottom: 38px;
+
+    }
+
+
+    .link {
+
+        padding: 18px 2px;
+
+    }
+
+
+    footer {
+
+        padding: 22px 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+
+    }
+
+
+    .footer-marca {
+
+        flex-direction: column;
+
+        gap: 6px;
+
+    }
+
+
+    .footer-marca span {
+
+        font-size: 15px;
+
+    }
+
+
+    .footer-direitos {
+
+        flex-direction: column;
+
+        gap: 5px;
+
+    }
+
+
+    .footer-direitos p {
+
+        font-size: 7px;
+
+    }
+
+
+    .pagina::before {
+
+        width: 350px;
+
+        height: 350px;
+
+        top: -180px;
+
+        right: -160px;
+
+    }
+
+
+    .pagina::after {
+
+        width: 260px;
+
+        height: 260px;
+
+        bottom: -150px;
+
+        left: -130px;
+
+    }
+
+}

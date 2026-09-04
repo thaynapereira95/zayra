@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ZAYRA | Login</title>
+
+    <link rel="stylesheet" href="assets/css/login.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <main class="login-container">
+
+        <div class="login-box">
+
+            <div class="admin-logo">
+                ZAYRA
+            </div>
+
+            <span>ÁREA RESTRITA</span>
+
+            <h1>Entrar</h1>
+
+            <p>
+                Acesse o painel administrativo da ZAYRA.
+            </p>
+
+
+            <form id="form-login">
+
+                <div class="campo">
+
+                    <label for="email">
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="seu@email.com"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="senha">
+                        Senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        placeholder="Sua senha"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn-adicionar"
+                >
+                    Entrar
+                </button>
+
+
+                <p
+                    id="erro-login"
+                    class="erro-login"
+                ></p>
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+    <!-- SUPABASE -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="assets/js/login.js"></script>
+
+</body>
+
+</html>

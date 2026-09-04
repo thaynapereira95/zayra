@@ -1,0 +1,802 @@
+/* CONFIGURACOES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", Arial, sans-serif;
+    background-color: #f8f5f2;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* FONTES */
+
+@font-face {
+    font-family: "AhSing";
+    src: url("../fonts/AhSing.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* MENU */
+
+.menu {
+    width: 100%;
+    height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    background-color: #f8f5f2;
+
+    border-bottom: 1px solid #e5dfda;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* LOGO */
+
+.logo {
+    font-family: "AhSing", "Bodoni Moda", serif;
+
+    font-size: 32px;
+
+    letter-spacing: 3px;
+
+    color: #222;
+
+    font-weight: normal;
+}
+
+
+/* MENU CENTRAL */
+
+.menu nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu nav a {
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    color: #444;
+
+    transition: 0.3s;
+}
+
+.menu nav a:hover {
+    color: #9b8173;
+}
+
+
+/* CONTATO */
+
+.contact {
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    padding: 11px 20px;
+
+    border: 1px solid #222;
+
+    transition: 0.3s;
+}
+
+.contact:hover {
+    background-color: #222;
+
+    color: #fff;
+}
+
+
+/* =====================================================
+   BANNER PRINCIPAL
+===================================================== */
+
+.hero {
+    min-height: 680px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background:
+        linear-gradient(
+            rgba(248, 245, 242, 0.45),
+            rgba(248, 245, 242, 0.45)
+        ),
+        url("../img/banner.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+.hero-content {
+    max-width: 800px;
+}
+
+
+.hero-subtitle {
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 25px;
+
+    color: #555;
+}
+
+
+.hero h1 {
+    font-family: "Bodoni Moda", serif;
+
+    font-size: 76px;
+
+    font-weight: 500;
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 25px;
+
+    color: #222;
+}
+
+
+.hero-content > p:not(.hero-subtitle) {
+    font-size: 15px;
+
+    color: #555;
+
+    margin-bottom: 35px;
+}
+
+
+/* =====================================================
+   BOTOES
+===================================================== */
+
+.btn {
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    background-color: #222;
+
+    color: #fff;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #9b8173;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   CATALOGO
+===================================================== */
+
+.catalogo {
+    padding: 110px 6%;
+
+    background-color: #f8f5f2;
+}
+
+
+/* TITULO DAS SECOES */
+
+.titulo-secao {
+    text-align: center;
+
+    margin-bottom: 55px;
+}
+
+.titulo-secao p {
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: #999;
+
+    margin-bottom: 12px;
+}
+
+.titulo-secao h2 {
+    font-family: "Bodoni Moda", serif;
+
+    font-size: 48px;
+
+    font-weight: 500;
+
+    color: #222;
+
+    margin-bottom: 12px;
+}
+
+.titulo-secao span {
+    font-size: 13px;
+
+    color: #777;
+}
+
+
+/* =====================================================
+   PRODUTOS
+===================================================== */
+
+.produtos {
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 28px;
+}
+
+
+/* CARD */
+
+.produto {
+    position: relative;
+
+    background-color: #fff;
+
+    border: 1px solid #eee8e3;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.produto:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 12px 30px rgba(34, 34, 34, 0.08);
+}
+
+
+/* IMAGEM */
+
+.produto-imagem {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 3 / 4;
+
+    overflow: hidden;
+
+    background-color: #eee8e3;
+}
+
+.produto-imagem img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.7s ease;
+}
+
+.produto:hover .produto-imagem img {
+    transform: scale(1.05);
+}
+
+
+/* INFORMACOES */
+
+.produto-info {
+    padding: 20px 18px 18px;
+}
+
+.produto-categoria {
+    font-size: 9px;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
+
+    color: #a18f84;
+
+    margin-bottom: 9px;
+}
+
+.produto-nome {
+    font-size: 15px;
+
+    font-weight: 500;
+
+    color: #222;
+
+    line-height: 1.4;
+
+    margin-bottom: 10px;
+}
+
+.produto-preco {
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #222;
+
+    margin-bottom: 9px;
+}
+
+.produto-tamanho {
+    font-size: 11px;
+
+    color: #888;
+
+    margin-bottom: 2px;
+}
+
+
+/* BOTAO DO PRODUTO */
+
+.produto-btn {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 18px;
+
+    padding: 13px 10px;
+
+    background-color: transparent;
+
+    border: 1px solid #222;
+
+    color: #222;
+
+    text-align: center;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.produto-btn:hover {
+    background-color: #222;
+
+    color: #fff;
+
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   CATEGORIAS
+===================================================== */
+
+.categoria {
+    padding: 100px 6%;
+
+    background-color: #fff;
+}
+
+.categoria:nth-of-type(even) {
+    background-color: #f8f5f2;
+}
+
+
+/* =====================================================
+   SOBRE
+===================================================== */
+
+.sobre {
+    min-height: 520px;
+
+    padding: 100px 8%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background-color: #e9e1dc;
+}
+
+.sobre-conteudo {
+    max-width: 750px;
+}
+
+.sobre-subtitulo {
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: #777;
+
+    margin-bottom: 20px;
+}
+
+.sobre h2 {
+    font-family: "Bodoni Moda", serif;
+
+    font-size: 50px;
+
+    line-height: 1.15;
+
+    font-weight: 500;
+
+    color: #222;
+
+    margin-bottom: 25px;
+}
+
+.sobre-conteudo > p:last-child {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: #555;
+}
+
+
+/* =====================================================
+   CONTATO
+===================================================== */
+
+.contato {
+    padding: 110px 20px;
+
+    text-align: center;
+
+    background-color: #f8f5f2;
+}
+
+.contato-conteudo {
+    max-width: 700px;
+
+    margin: 0 auto;
+}
+
+.contato-subtitulo {
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: #999;
+
+    margin-bottom: 18px;
+}
+
+.contato h2 {
+    font-family: "Bodoni Moda", serif;
+
+    font-size: 48px;
+
+    font-weight: 500;
+
+    margin-bottom: 20px;
+}
+
+.contato-conteudo > p:not(.contato-subtitulo) {
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: #666;
+
+    margin-bottom: 30px;
+}
+
+
+/* =====================================================
+   RODAPE
+===================================================== */
+
+footer {
+    padding: 50px 20px;
+
+    text-align: center;
+
+    background-color: #222;
+
+    color: #fff;
+}
+
+footer .logo {
+    color: #fff;
+
+    font-size: 30px;
+
+    margin-bottom: 15px;
+}
+
+footer p {
+    font-size: 11px;
+
+    color: #aaa;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .menu {
+        padding: 0 4%;
+    }
+
+    .menu nav {
+        gap: 18px;
+    }
+
+    .produtos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 64px;
+    }
+
+}
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .menu {
+        height: auto;
+
+        min-height: 75px;
+
+        padding: 18px 20px;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+    .menu .logo {
+        font-size: 27px;
+    }
+
+    .menu nav {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        overflow-x: auto;
+
+        gap: 20px;
+
+        padding-bottom: 5px;
+    }
+
+    .menu nav a {
+        font-size: 10px;
+
+        white-space: nowrap;
+    }
+
+    .contact {
+        font-size: 10px;
+
+        padding: 9px 14px;
+    }
+
+
+    /* BANNER */
+
+    .hero {
+        min-height: 580px;
+
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+
+        letter-spacing: -1px;
+    }
+
+    .hero-content > p:not(.hero-subtitle) {
+        font-size: 13px;
+    }
+
+
+    /* CATALOGO */
+
+    .catalogo,
+    .categoria {
+        padding: 75px 20px;
+    }
+
+    .titulo-secao {
+        margin-bottom: 40px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 38px;
+    }
+
+    .produtos {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 14px;
+    }
+
+    .produto {
+        border: 1px solid #eee8e3;
+    }
+
+    .produto-info {
+        padding: 14px 12px 13px;
+    }
+
+    .produto-categoria {
+        font-size: 8px;
+
+        letter-spacing: 2px;
+    }
+
+    .produto-nome {
+        font-size: 13px;
+
+        line-height: 1.35;
+    }
+
+    .produto-preco {
+        font-size: 13px;
+    }
+
+    .produto-tamanho {
+        font-size: 10px;
+    }
+
+    .produto-btn {
+        margin-top: 14px;
+
+        padding: 11px 5px;
+
+        font-size: 8px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    /* SOBRE */
+
+    .sobre {
+        min-height: 450px;
+
+        padding: 80px 25px;
+    }
+
+    .sobre h2 {
+        font-size: 38px;
+    }
+
+
+    /* CONTATO */
+
+    .contato {
+        padding: 80px 25px;
+    }
+
+    .contato h2 {
+        font-size: 38px;
+    }
+
+}
+
+
+/* =====================================================
+   CELULAR PEQUENO
+===================================================== */
+
+@media (max-width: 450px) {
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-subtitle {
+        font-size: 10px;
+
+        letter-spacing: 3px;
+    }
+
+    .produtos {
+        gap: 10px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 34px;
+    }
+
+    .sobre h2 {
+        font-size: 34px;
+    }
+
+    .contato h2 {
+        font-size: 34px;
+    }
+
+}
+
