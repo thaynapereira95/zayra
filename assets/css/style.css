@@ -664,10 +664,13 @@ footer p {
     /* BANNER */
 
     .hero {
-        min-height: 580px;
+    min-height: 580px;
+    padding: 60px 20px;
 
-        padding: 60px 20px;
-    }
+    background-size: auto 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
 
     .hero h1 {
         font-size: 48px;
