@@ -8,6 +8,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px;
 }
 
 body {
@@ -618,6 +619,10 @@ footer p {
 
 @media (max-width: 768px) {
 
+    html {
+        scroll-padding-top: 160px;
+    }
+
     .menu {
         height: auto;
 
@@ -661,85 +666,32 @@ footer p {
     }
 
 
-    /* =================================================
-       BANNER MOBILE
-    ================================================= */
+    /* BANNER */
 
     .hero {
-        min-height: 0;
+        min-height: 580px;
 
-        height: auto;
+        padding: 60px 20px;
 
-        display: flex;
+        background-size: cover;
 
-        align-items: flex-start;
-
-        justify-content: center;
-
-        padding: 0 20px 60px;
-
-        background:
-            linear-gradient(
-                rgba(248, 245, 242, 0.35),
-                rgba(248, 245, 242, 0.35)
-            ),
-            url("../img/banner-zayra.png");
-
-        background-size: 100% auto;
-
-        background-position: center top;
+        background-position: 82% center;
 
         background-repeat: no-repeat;
-
-        background-color: #f8f5f2;
     }
-
-
-    .hero-content {
-        width: 100%;
-
-        max-width: 500px;
-
-        padding-top: calc(56.28vw + 55px);
-
-        position: relative;
-
-        z-index: 2;
-    }
-
-
-    .hero-subtitle {
-        font-size: 10px;
-
-        letter-spacing: 3px;
-
-        margin-bottom: 22px;
-    }
-
 
     .hero h1 {
         font-size: 48px;
 
         letter-spacing: -1px;
-
-        line-height: 1.05;
-
-        margin-bottom: 22px;
     }
-
 
     .hero-content > p:not(.hero-subtitle) {
         font-size: 13px;
-
-        line-height: 1.7;
-
-        margin-bottom: 30px;
     }
 
 
-    /* =================================================
-       CATALOGO
-    ================================================= */
+    /* CATALOGO */
 
     .catalogo,
     .categoria {
@@ -799,9 +751,7 @@ footer p {
     }
 
 
-    /* =================================================
-       SOBRE
-    ================================================= */
+    /* SOBRE */
 
     .sobre {
         min-height: 450px;
@@ -814,9 +764,7 @@ footer p {
     }
 
 
-    /* =================================================
-       CONTATO
-    ================================================= */
+    /* CONTATO */
 
     .contato {
         padding: 80px 25px;
@@ -835,30 +783,22 @@ footer p {
 
 @media (max-width: 450px) {
 
-    .hero {
-        padding-bottom: 50px;
+    html {
+        scroll-padding-top: 160px;
     }
 
-    .hero-content {
-        padding-top: calc(56.28vw + 45px);
+    .hero {
+        background-position: 70% center;
     }
 
     .hero h1 {
         font-size: 40px;
-
-        letter-spacing: -1px;
     }
 
     .hero-subtitle {
         font-size: 10px;
 
         letter-spacing: 3px;
-    }
-
-    .hero-content > p:not(.hero-subtitle) {
-        font-size: 12px;
-
-        line-height: 1.7;
     }
 
     .produtos {
